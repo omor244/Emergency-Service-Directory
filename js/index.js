@@ -80,7 +80,8 @@ for(let copy of copyCart){
     copy.addEventListener('click', function(e){
          e.preventDefault()
         //  step 1
-         const titleElement = copy.parentNode.parentNode.childNodes[3].childNodes[1]
+         const titleElement = copy.parentNode.parentNode.children[2].children[1]
+        //  console.log(titleElement)
          
          //  step 2 
          
