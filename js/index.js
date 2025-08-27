@@ -1,7 +1,7 @@
 
 
 
-
+let copynumber = 0
 let num = 0
 
 
@@ -32,7 +32,7 @@ for (let call of callbtn) {
        const displaycoin = getbyid('coin')
        let dicrescingCon = parseInt( displaycoin.innerText  )
    
-    
+        
 
       const div = document.createElement('div')
      div.classList = 'mt-10 flex justify-between items-center'
@@ -60,7 +60,7 @@ ${number}
 
        displaycoin.innerText = dicrescingCon
       
-       cartContainer.appendChild(div)
+       cartContainer.append(div)
       
 
 
@@ -72,6 +72,7 @@ ${number}
 
     })
 }
+
 
 const copyCart = document.getElementsByClassName('copy-cart')
 
@@ -85,13 +86,16 @@ for(let copy of copyCart){
          
          const titleText = titleElement.innerText
          
-
+    
         navigator.clipboard.writeText(titleText)
 
         .then(()=>{
             alert("coped:" +  titleText)
+
         })
-        
+
+          copynumber++
+          let copycoin = parseInt(getbyid('copy-coin').innerText = copynumber)
     })
 }
 
